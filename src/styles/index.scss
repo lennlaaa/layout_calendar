@@ -14,11 +14,13 @@ $columns: 7;
 $gap: 1px;
 $padding: 10px;
 $start-days: (mon, tue, wed, thu, fri, sat, sun);
+
 @each $day, $index in $start-days {
   .calendar--start-day-#{$day} .calendar__day:first-child {
     margin-left: calc((#{$index}) * ($day-size + $gap));
   }
 }
+
 $calendar-width: $columns * $day-size + ($columns - 1) * $gap + 2 * $padding;
 
 
